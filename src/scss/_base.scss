@@ -1,0 +1,118 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  outline: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica, -apple-system;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // 1rem = 9px
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  // 1rem = 8px
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone-small) {
+    font-size: 38%;
+  }
+
+  // 1rem = 12px
+  @include respond(big-desktop) {
+    font-size: 65%;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica, -apple-system;
+  -webkit-tap-highlight-color: transparent;
+  font-variant-ligatures: no-contextual;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  -webkit-writing-mode: horizontal-tb !important;
+  -moz-writing-mode: horizontal-tb !important;
+  writing-mode: horizontal-tb !important;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -webkit-box-shadow: none;
+  font-family: inherit;
+  appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: inherit;
+  outline: none;
+  border: none;
+}
+
+#app {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.copyable-text {
+  -webkit-touch-callout: text; /* iOS Safari */
+  -webkit-user-select: text; /* Safari */
+  -khtml-user-select: text; /* Konqueror HTML */
+  -moz-user-select: text; /* Old versions of Firefox */
+  -ms-user-select: text; /* Internet Explorer/Edge */
+  user-select: text; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+[v-cloak] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: none;
+}
+
+.md-18 {
+  font-size: 18px;
+}
+
+.md-20 {
+  font-size: 20px;
+}
+
+.md-24 {
+  font-size: 24px
+}
