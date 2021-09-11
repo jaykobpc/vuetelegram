@@ -131,9 +131,9 @@ export default {
       const navbar = this.$refs.navbar;
       const settingsView = document.querySelector(".settingsview");
       settingsView.addEventListener("scroll", (e) => {
-        if (e.target.scrollTop > 150) {
+        if (e.target.scrollTop > 300) {
           navbar.classList.add("navbar_view_shadow");
-        } else if (e.target.scrollTop < 150) {
+        } else if (e.target.scrollTop < 300) {
           navbar.classList.remove("navbar_view_shadow");
         }
       });

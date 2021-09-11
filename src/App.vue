@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <router-view />
+    <transition
+      mode="out-in"
+      enter-active-class="animate__animated animate__slideInRight animate__faster"
+      leave-active-class="animate__animated animate__slideOutLeft animate__faster"
+    >
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -19,34 +25,4 @@ export default {
 $material-icons-font-path: "~material-icons/iconfont/";
 
 @import "material-icons/iconfont/filled.scss";
-
-.router-anim-enter-active {
-  animation: coming 0.25s ease;
-  opacity: 0;
-}
-
-.router-anim-leave-active {
-  animation: going 0.25s ease;
-}
-
-@keyframes going {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-500px);
-    opacity: 0;
-  }
-}
-
-@keyframes coming {
-  from {
-    transform: translateX(500px);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 </style>

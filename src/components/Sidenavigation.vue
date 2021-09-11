@@ -9,6 +9,7 @@
       <div class="sidenavigation__header">
         <div class="sidenavigation__widget">
           <img
+            @click="navigateSettings"
             src="@/assets/profiles/user1.jpeg"
             alt="Profile"
             class="sidenavigation__profile"
@@ -24,11 +25,11 @@
       </div>
       <!-- options -->
       <div class="sidenavigation__listview">
-        <div class="sidenavigation__listitem">
+        <div @click="navigateContacts" class="sidenavigation__listitem">
           <span class="material-icons">group</span>
           <h4 class="sidenavigation__listitem--text">New Group</h4>
         </div>
-        <div class="sidenavigation__listitem">
+        <div @click="navigateContacts" class="sidenavigation__listitem">
           <span class="material-icons">person</span>
           <h4 class="sidenavigation__listitem--text">Contacts</h4>
         </div>
@@ -80,6 +81,9 @@ export default {
     },
     navigateSettings() {
       this.$router.push("/settings");
+    },
+    navigateContacts() {
+      this.$router.push("/contacts");
     },
   },
 };
