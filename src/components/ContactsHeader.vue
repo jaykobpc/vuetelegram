@@ -35,13 +35,13 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 1.35rem 0.65rem;
+    padding: 1.55rem 0.65rem;
   }
 
   &__icon {
     @include roundedIcon;
     color: $color-grey-200;
-    margin: 0 0.85rem;
+    margin: 0 0.6rem;
   }
 
   &__title {

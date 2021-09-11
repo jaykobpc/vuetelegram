@@ -24,6 +24,7 @@ export default {
     height: 6.5rem;
     border-radius: 50%;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     background-color: $color-theme-default;

@@ -6,12 +6,12 @@
       </div>
       <div class="chatheader__contextview">
         <img
-          src="@/assets/profiles/user1.jpeg"
+          src="@/assets/profiles/user2.jpeg"
           alt="Profile"
           class="chatheader__imgview"
         />
         <div class="chatheader__widget">
-          <h3 class="chatheader__widget--title">Jaykobpc</h3>
+          <h3 class="chatheader__widget--title">Cassie cage</h3>
           <p class="chatheader__widget--subtitle">last seen recently</p>
         </div>
       </div>

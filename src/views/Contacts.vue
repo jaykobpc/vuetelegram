@@ -20,13 +20,16 @@
         <h4 class="contactsview__divider--text">Sorted by last seen time</h4>
       </div>
       <div class="contactsview__list">
-        <contact-list-card
-          v-for="(profile, index) in contactList"
-          :key="index"
-          :image="profile.profile_image"
-          :name="profile.profile_name"
-          :last_seen="profile.profile_lastseen"
-        />
+        <template v-for="(profile, index) in chatListview">
+          <template v-if="!profile.name.includes('Group')">
+            <contact-list-card
+              :key="index"
+              :image="profile.image"
+              :name="profile.name"
+              :last_seen="profile.time"
+            />
+          </template>
+        </template>
       </div>
     </div>
     <contact-add-fab />
@@ -47,7 +50,7 @@ export default {
     ContactAddFab,
   },
   computed: {
-    ...mapState(["contactList"]),
+    ...mapState(["chatListview"]),
   },
 };
 </script>

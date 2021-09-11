@@ -28,6 +28,7 @@ export default {
     width: 6.5rem;
     height: 6.5rem;
     border-radius: 50%;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;

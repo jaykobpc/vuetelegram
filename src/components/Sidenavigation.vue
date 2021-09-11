@@ -100,7 +100,7 @@ export default {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 
   &__container {
     width: 34rem;
@@ -201,7 +201,7 @@ export default {
 }
 
 .open_navigation .sidenavigation__container {
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease;
   transform: translateX(0);
 }
 </style>

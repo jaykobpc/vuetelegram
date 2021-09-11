@@ -7,6 +7,7 @@
           <div @click="navigateBack" class="settingsview__iconview">
             <span class="material-icons">arrow_back</span>
           </div>
+          <h3 class="settingsview__headernav--text">Jaykobpc</h3>
           <div class="settingsview__iconview">
             <span class="material-icons">more_vert</span>
           </div>
@@ -128,10 +129,11 @@ export default {
     },
     scroll_view_shadow() {
       const navbar = this.$refs.navbar;
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
+      const settingsView = document.querySelector(".settingsview");
+      settingsView.addEventListener("scroll", (e) => {
+        if (e.target.scrollTop > 150) {
           navbar.classList.add("navbar_view_shadow");
-        } else if (window.scrollY < 50) {
+        } else if (e.target.scrollTop < 150) {
           navbar.classList.remove("navbar_view_shadow");
         }
       });
@@ -145,7 +147,12 @@ export default {
 
 <style lang="scss">
 .navbar_view_shadow {
-  background-color: $color-primary;
+  background-color: $color-theme-default;
+}
+
+.navbar_view_shadow h3 {
+  opacity: 1;
+  visibility: visible;
 }
 
 .settingsview {
@@ -161,11 +168,11 @@ export default {
   }
 
   &__headerwidget {
-    background: url("../assets/profiles/user1.jpeg");
+    background: url("../assets/profiles/user2.jpeg");
     background-repeat: no-repeat;
-    background-position: center;
-    // background-attachment: fixed;
-    height: 40vh;
+    background-position: center center;
+    background-size: cover;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -179,18 +186,30 @@ export default {
     justify-content: space-between;
     width: 100%;
     padding: 1.35rem 0.5rem;
-    // position: fixed;
-    // top: 0;
-    // z-index: 990;
+    position: fixed;
+    top: 0;
+    z-index: 990;
+
+    &--text {
+      font-family: inherit;
+      font-size: 1.75rem;
+      letter-spacing: 0.045rem;
+      color: $color-grey-200;
+      transition: all 0.3s ease;
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 
   &__iconview {
     @include roundedIcon;
-    color: $color-grey-100;
+    color: $color-grey-200;
   }
 
   &__profilebox {
     padding: 2rem 2rem;
+    position: absolute;
+    bottom: 0;
   }
 
   &__profilewidget {
@@ -214,11 +233,11 @@ export default {
   &__uploadfab {
     position: absolute;
     bottom: -30px;
-    right: 30px;
-    width: 7.5rem;
-    height: 7.5rem;
+    right: 20px;
+    width: 7rem;
+    height: 7rem;
     background-color: $color-white;
-    z-index: 550;
+    z-index: 500;
     border-radius: 50%;
     display: flex;
     justify-content: center;

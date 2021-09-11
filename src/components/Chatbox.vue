@@ -155,10 +155,9 @@ export default {
 
     &--svg {
       position: absolute;
-      top: 0;
-      margin-top: 3.55rem;
+      // top: 0;
       right: -9px;
-      bottom: -10px;
+      bottom: -5px;
     }
 
     &--leftsvg {
@@ -174,6 +173,6 @@ export default {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   border-top-right-radius: 8px;
-  background-color: #e6f7d6;
+  background-color: rgb(238,254,223);
 }
 </style>

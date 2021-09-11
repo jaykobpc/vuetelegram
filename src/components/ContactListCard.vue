@@ -10,7 +10,7 @@
           <!-- <p class="chatcard__smtext">13:10</p> -->
         </div>
         <div class="chatcard__textview">
-          <p class="chatcard__textview--lg">{{ last_seen }}</p>
+          <p class="chatcard__textview--lg">Last seen at {{ last_seen }}</p>
           <!-- <span class="chatcard__textview--counter">15</span> -->
         </div>
       </div>
