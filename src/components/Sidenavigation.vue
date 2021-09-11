@@ -44,7 +44,7 @@
           <span class="material-icons">bookmark_border</span>
           <h4 class="sidenavigation__listitem--text">Saved Messages</h4>
         </div>
-        <div class="sidenavigation__listitem">
+        <div @click="navigateSettings" class="sidenavigation__listitem">
           <span class="material-icons">settings</span>
           <h4 class="sidenavigation__listitem--text">Settings</h4>
         </div>
@@ -77,6 +77,9 @@ export default {
   methods: {
     closeNavigation() {
       this.$store.dispatch("closeSideNavigation");
+    },
+    navigateSettings() {
+      this.$router.push("/settings");
     },
   },
 };
