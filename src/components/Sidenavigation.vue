@@ -10,7 +10,7 @@
         <div class="sidenavigation__widget">
           <img
             @click="navigateSettings"
-            src="@/assets/profiles/user1.jpeg"
+            src="@/assets/profiles/user2.jpeg"
             alt="Profile"
             class="sidenavigation__profile"
           />
