@@ -2,7 +2,11 @@
   <div @click="navigateRoute" class="chatcard">
     <div class="chatcard__container">
       <div class="chatcard__imgbox">
-        <img :src="require(`@/assets/profiles/${image}`)" :alt="name" class="chatcard__imgbox--img" />
+        <img
+          :src="require(`@/assets/profiles/${image}`)"
+          :alt="name"
+          class="chatcard__imgbox--img"
+        />
       </div>
       <div class="chatcard__context">
         <div class="chatcard__flexview">

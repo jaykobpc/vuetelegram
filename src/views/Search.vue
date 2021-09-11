@@ -32,15 +32,20 @@
       <!-- slider contact bubbles -->
       <div class="searchview__contactbubble">
         <swiper ref="myContacts" :options="swiperOptionscontacts">
-          <swiper-slide v-for="(n, index) in 6" :key="index">
-            <div class="searchview__contactcircle">
-              <img
-                src="@/assets/profiles/user1.jpeg"
-                alt="Profile"
-                class="searchview__contactcircle--img"
-              />
-              <p class="searchview__contactcircle--textview">Jaykobpc</p>
-            </div>
+          <swiper-slide
+            v-for="(n, index) in chatListview.slice(7, 12)"
+            :key="index"
+          >
+            <template v-if="!n.name.includes('Group')">
+              <div class="searchview__contactcircle">
+                <img
+                  :src="require(`@/assets/profiles/${n.image}`)"
+                  alt="Profile"
+                  class="searchview__contactcircle--img"
+                />
+                <p class="searchview__contactcircle--textview">{{ n.name.slice(0, 6) }}</p>
+              </div>
+            </template>
           </swiper-slide>
         </swiper>
       </div>
@@ -51,11 +56,11 @@
         </div>
         <div class="contactsview__list">
           <contact-list-card
-            v-for="(profile, index) in searchList"
+            v-for="(profile, index) in chatListview.slice(7, 10)"
             :key="index"
-            :image="profile.profile_image"
-            :name="profile.profile_name"
-            :last_seen="profile.profile_lastseen"
+            :image="profile.image"
+            :name="profile.name"
+            :last_seen="profile.time"
           />
         </div>
       </div>
@@ -76,7 +81,7 @@ export default {
     ContactListCard,
   },
   computed: {
-    ...mapState(["searchList"]),
+    ...mapState(["chatListview"]),
   },
   data() {
     return {
