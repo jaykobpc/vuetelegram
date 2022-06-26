@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div safe-area-view>
     <transition
       mode="out-in"
       enter-active-class="animate__animated animate__slideInRight animate__faster"
