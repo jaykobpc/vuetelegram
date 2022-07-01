@@ -23,13 +23,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.homeview {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  background-color: $color-white;
-}
-</style>

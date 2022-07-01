@@ -2,3 +2,15 @@
 @import './mixins';
 @import './base';
 
+// components
+@import './navbar.scss';
+@import './chatbox.scss';
+@import './chatcard.scss';
+@import './chatcontainer.scss';
+@import './chatfooter.scss';
+@import './chatheader.scss';
+@import './composerFab.scss';
+@import './contactAddfab.scss';
+@import './contactlistcard.scss';
+@import './contactsheader.scss';
+@import './sidenavigation.scss';

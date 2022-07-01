@@ -1,13 +1,7 @@
 <template>
-  <div safe-area-view>
-    <transition
-      mode="out-in"
-      enter-active-class="animate__animated animate__slideInRight animate__faster"
-      leave-active-class="animate__animated animate__slideOutLeft animate__faster"
-    >
-      <router-view />
-    </transition>
-  </div>
+  <main safe-area-view="interactive">
+    <router-view />
+  </main>
 </template>
 
 <script>

@@ -27,11 +27,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.chatcontainer {
-  height: 100%;
-  background-color: inherit;
-  overflow-y: auto;
-}
-</style>

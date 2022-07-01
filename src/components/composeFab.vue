@@ -16,24 +16,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.composefab {
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
-  z-index: 200;
-
-  &__container {
-    width: 6.5rem;
-    height: 6.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-theme-default;
-    color: $color-grey-200;
-  }
-}
-</style>
